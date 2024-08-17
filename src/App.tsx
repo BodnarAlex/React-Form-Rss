@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { FormOnePage } from './pages/form-one-page/FormOnePage.tsx.tsx';
 import { FormTwoPage } from './pages/form-two-page/FormTwoPage.tsx';
 import { MainPage } from './pages/main-page/MainPage.tsx';
+import { NotFound } from './pages/not-found/NotFound.tsx';
 
 export function App(): ReactNode {
   return (
@@ -11,6 +12,7 @@ export function App(): ReactNode {
       <Route path="/" element={<MainPage />} />
       <Route path="/form-one/" element={<FormOnePage />} />
       <Route path="/form-two/" element={<FormTwoPage />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
