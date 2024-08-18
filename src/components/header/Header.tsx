@@ -8,9 +8,9 @@ export function Header(): ReactNode {
     <header className={styles.header}>
       <div className={styles.blur}>
         <nav className={styles.links}>
-          <Link to="/form-one/">To form one</Link>
-          <Link to="/">To main</Link>
-          <Link to="/form-two/">To form two</Link>
+          <Link to="/form-one/">Uncontrolled</Link>
+          <Link to="/">Main</Link>
+          <Link to="/form-two/">React Hook Form</Link>
         </nav>
       </div>
     </header>
