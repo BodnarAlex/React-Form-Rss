@@ -22,7 +22,7 @@ interface FormData {
   email: string;
   password: string;
   confirmPassword: string;
-  age: string;
+  age: number;
   gender: string;
   country: string;
   picture: string | null;
@@ -50,7 +50,7 @@ export function FormOne(): ReactNode {
       email: (formData.get('email') as string) || '',
       password: (formData.get('password') as string) || '',
       confirmPassword: (formData.get('confirmPassword') as string) || '',
-      age: (formData.get('age') as string) || '',
+      age: Number(formData.get('age')),
       gender: (formData.get('gender') as string) || '',
       country: (formData.get('country') as string) || '',
       picture: pictureBase64,

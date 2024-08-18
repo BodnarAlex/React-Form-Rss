@@ -25,6 +25,7 @@ module.exports = {
     'no-void': ['error', { allowAsStatement: true }],
     "no-console": "error",
     'jsx-a11y/no-static-element-interactions': 'off',
+    "react/jsx-props-no-spreading": ["off"],
     'jsx-a11y/click-events-have-key-events': 'off',
     '@typescript-eslint/no-shadow': 'off',
     'simple-import-sort/imports': 'error',
