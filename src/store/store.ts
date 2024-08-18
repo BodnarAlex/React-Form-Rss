@@ -1,22 +1,12 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface FormData {
-  name: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-  age: number;
-  gender: string;
-  country: string;
-  picture: string | null;
-  terms: boolean;
-}
+import type { IFormData } from './types.ts';
 
 const formDataSlice = createSlice({
   name: 'formData',
-  initialState: [] as FormData[],
+  initialState: [] as IFormData[],
   reducers: {
-    addFormData: (state, action: PayloadAction<FormData>) => {
+    addFormData: (state, action: PayloadAction<IFormData>) => {
       state.push(action.payload);
     },
   },

@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { addFormData } from '../../store/store.ts';
+import type { IFormData } from '../../store/types.ts';
 import styles from './styles.module.scss';
 
 const countries = ['United States', 'Canada', 'Mexico'];
@@ -16,18 +17,6 @@ const convertToBase64 = (file: File): Promise<string> =>
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
-
-interface FormData {
-  name: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-  age: number;
-  gender: string;
-  country: string;
-  picture: string | null;
-  terms: boolean;
-}
 
 export function FormOne(): ReactNode {
   const navigate = useNavigate();
@@ -45,7 +34,7 @@ export function FormOne(): ReactNode {
       pictureBase64 = await convertToBase64(pictureFile);
     }
 
-    const data: FormData = {
+    const data: IFormData = {
       name: (formData.get('name') as string) || '',
       email: (formData.get('email') as string) || '',
       password: (formData.get('password') as string) || '',

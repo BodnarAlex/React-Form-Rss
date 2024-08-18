@@ -1,19 +1,10 @@
 import type { ReactNode } from 'react';
 
+import type { IFormData } from '../../store/types.ts';
 import styles from './styles.module.scss';
 
 interface CardProps {
-  item: {
-    name: string;
-    email: string;
-    password: string;
-    confirmPassword: string;
-    age: number;
-    gender: string;
-    country: string;
-    picture: string | null;
-    terms: boolean;
-  };
+  item: IFormData;
 }
 
 export function Card({ item }: CardProps): ReactNode {
