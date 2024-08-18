@@ -1,9 +1,15 @@
 import type { ReactNode } from 'react';
 
+import { Footer } from '../components/footer/Footer';
+import { FormTwo } from '../components/form-two/FormTwo';
+import { Header } from '../components/header/Header';
+
 export function FormTwoPage(): ReactNode {
   return (
-    <main className="main">
-      <h1>This is form two!</h1>
-    </main>
+    <>
+      <Header />
+      <FormTwo />
+      <Footer />
+    </>
   );
 }

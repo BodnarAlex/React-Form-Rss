@@ -1,9 +1,15 @@
 import type { ReactNode } from 'react';
 
+import { Footer } from '../components/footer/Footer';
+import { Header } from '../components/header/Header';
+import { Result } from '../components/result/Result';
+
 export function MainPage(): ReactNode {
   return (
-    <main className="main">
-      <h1>This is main!</h1>
-    </main>
+    <>
+      <Header />
+      <Result />
+      <Footer />
+    </>
   );
 }

@@ -1,0 +1,40 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.blur {
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 90px;
+  margin: 0 auto;
+  background: inherit;
+}
+
+.blur::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  background: inherit;
+  box-shadow: inset 0 0 0 200px rgb(255 255 255 / 35%);
+  filter: blur(10px);
+}
+
+.links {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 40px;
+  font-size: 20px;
+}
