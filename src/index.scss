@@ -1,0 +1,108 @@
+:root {
+  --min-width: 360px;
+  --max-width: 1440px;
+  --max-height: 100svh;
+  --min-height: calc(100svh - 285px - 140px);
+
+  --primary-color: #100f13;
+  --secondary-color: #2d2c2a;
+  --grey-color: #535e5e;
+  --light-color: #fcfbe7;
+  --background-color: #551a8b;
+  --opacity-color: #c77abdb3;
+  --error-color: #b30000;
+
+  font-family: "Inter", system-ui, "Avenir", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgb(255 255 255 / 87%);
+  background-color: #242424;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: var(--max-height);
+}
+
+a {
+  font-weight: 600;
+  text-decoration: inherit;
+  color: var(--background-color);
+}
+
+a:hover {
+  color: var(--opacity-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
+  min-height: var(--max-height);
+  margin: 0;
+  text-align: center;
+  background: url("./assets/back.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  min-height: var(--min-height);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
