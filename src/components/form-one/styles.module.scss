@@ -19,6 +19,11 @@
 }
 
 .form_element {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 
   & label {
@@ -43,4 +48,18 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+}
+
+.checkbox_container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.error {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  font-size: 12px;
+  text-align: right;
+  color: var(--error-color);
 }

@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+import { schema } from '../../schema/schema.ts';
 import { addFormData } from '../../store/store.ts';
-import { schema } from './schema.ts';
 import styles from './styles.module.scss';
 
 interface FormValues {
